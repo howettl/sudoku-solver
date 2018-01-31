@@ -1,7 +1,9 @@
-package com.howettl.sudokusolver
+package com.howettl.sudokusolver.controller
 
 import android.app.Activity
 import android.os.Bundle
+import com.howettl.sudokusolver.model.Puzzle
+import com.howettl.sudokusolver.R
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
@@ -24,7 +26,8 @@ class MainActivity : Activity() {
                     val responseJson = response?.body()?.string()
                     System.out.println(responseJson ?: "Response or body was null")
                     runOnUiThread {
-                        puzzleView.puzzle = Puzzle(responseJson ?: return@runOnUiThread)
+                        puzzleView.puzzle = Puzzle(responseJson
+                                ?: return@runOnUiThread)
                     }
                 }
 

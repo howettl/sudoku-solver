@@ -1,4 +1,4 @@
-package com.howettl.sudokusolver
+package com.howettl.sudokusolver.model
 
 import android.util.Log
 import org.json.JSONException

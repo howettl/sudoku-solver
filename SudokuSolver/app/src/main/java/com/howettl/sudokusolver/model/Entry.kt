@@ -1,4 +1,4 @@
-package com.howettl.sudokusolver
+package com.howettl.sudokusolver.model
 
 /**
  * Created by Lee on 2018-01-30.

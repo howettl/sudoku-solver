@@ -1,13 +1,12 @@
-package com.howettl.sudokusolver
+package com.howettl.sudokusolver.view
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import kotlinx.android.synthetic.main.view_puzzle.view.*
+import com.howettl.sudokusolver.R
+import com.howettl.sudokusolver.model.Puzzle
 
 /**
  * Created by Lee on 2018-01-30.
