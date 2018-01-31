@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sudoku Solver</string>
+    <string name="random_puzzle">Random Puzzle</string>
+    <string name="solve">Solve!</string>
+</resources>

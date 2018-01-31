@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry74"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry76"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry78"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/entry80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry82"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry83"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry84"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry85"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry86"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry87"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/entry88"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="123456789"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
