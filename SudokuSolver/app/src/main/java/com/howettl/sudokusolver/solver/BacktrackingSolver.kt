@@ -47,7 +47,7 @@ class BacktrackingSolver: Solver {
     }
 
     private fun doSimpleEntries() {
-        var knownUnpopulatedPositions = currentEntries.filterKeys { getPossibleValues(it).size == 1 }
+        var knownUnpopulatedPositions = currentEntries.filterKeys { getPossibleValues(it).size == 1 } // TODO && !currentEntries[it].isPopulated()
         while (knownUnpopulatedPositions.isNotEmpty()) {
             knownUnpopulatedPositions.keys.forEach { position ->
                 currentEntries[position] = Entry(getPossibleValues(position).first(), false)
