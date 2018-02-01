@@ -8,20 +8,20 @@ import org.json.JSONObject
  * Created by Lee on 2018-01-30.
  * SudokuSolver
  */
-class Puzzle(json: String) {
-    val entries: List<List<Entry>>
-    init {
+class Puzzle {
+    var entries: Map<Position, Entry>? = null
+
+    fun setEntries(json: String) {
         try {
             val jsonObject = JSONObject(json)
             val board = jsonObject.getJSONArray("board")
-            val parsedEntries: MutableList<List<Entry>> = arrayListOf()
-            for (i: Int in 0 until board.length()) {
-                val row = board.getJSONArray(i)
-                val entryRow: MutableList<Entry> = arrayListOf()
-                (0 until row.length())
-                        .map { row.getInt(it) }
-                        .forEach { entryRow.add(Entry(it, it in 1..9)) }
-                parsedEntries.add(entryRow)
+            val parsedEntries: MutableMap<Position, Entry> = mutableMapOf()
+            for (row: Int in 0 until board.length()) {
+                val rowArray = board.getJSONArray(row)
+                for (col: Int in 0 until rowArray.length()) {
+                    val number = rowArray.getInt(col)
+                    parsedEntries[Position(row, col)] = Entry(number, true)
+                }
             }
             entries = parsedEntries
         } catch (e: JSONException) {
