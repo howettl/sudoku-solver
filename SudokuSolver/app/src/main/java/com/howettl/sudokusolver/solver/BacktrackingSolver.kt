@@ -46,7 +46,7 @@ class BacktrackingSolver: Solver {
             doSearch(updateListener)
             val finishedPuzzle = Puzzle()
             finishedPuzzle.entries = currentEntries
-            notifyCompletionListener(finishedPuzzle, false, completionListener)
+            notifyCompletionListener(finishedPuzzle, getUnpopulatedPositions().isEmpty(), completionListener)
         }).run()
     }
 
@@ -82,18 +82,19 @@ class BacktrackingSolver: Solver {
         (0 .. 8).forEach { rowIndex ->
             positions.add(Position(rowIndex, position.col))
         }
-        when (position.row) {
-            in 0..2 -> positions.addAll((0..2).map { Position(it, position.col) })
-            in 3..5 -> positions.addAll((3..5).map { Position(it, position.col) })
-            in 6..8 -> positions.addAll((6..8).map { Position(it, position.col) })
+        val rowRange: IntRange = when (position.row) {
+            in 0..2 -> 0..2
+            in 3..5 -> 3..5
+            in 6..8 -> 6..8
             else -> return@getUnits hashSetOf()
         }
-        when (position.col) {
-            in 0..2 -> positions.addAll((0..2).map { Position(position.row, it) })
-            in 3..5 -> positions.addAll((3..5).map { Position(position.row, it) })
-            in 6..8 -> positions.addAll((6..8).map { Position(position.row, it) })
+        val colRange: IntRange = when (position.col) {
+            in 0..2 -> 0..2
+            in 3..5 -> 3..5
+            in 6..8 -> 6..8
             else -> return@getUnits hashSetOf()
         }
+        for (row: Int in rowRange) { colRange.mapTo(positions) { Position(row, it) } }
         positions.remove(position)
         return positions
     }
