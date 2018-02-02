@@ -47,14 +47,14 @@ class BacktrackingSolver: Solver {
     }
 
     private fun doSimpleEntries() {
-        var knownUnpopulatedPositions = currentEntries.filterKeys { getPossibleValues(it).size == 1 } // TODO && !currentEntries[it].isPopulated()
+        var knownUnpopulatedPositions = getUnpopulatedPositionsWithSingleCandidate()
         while (knownUnpopulatedPositions.isNotEmpty()) {
             knownUnpopulatedPositions.keys.forEach { position ->
                 currentEntries[position] = Entry(getPossibleValues(position).first(), false)
             }
             val updatedPuzzle = Puzzle()
             updatedPuzzle.entries = currentEntries
-            knownUnpopulatedPositions = currentEntries.filterKeys { getPossibleValues(it).size == 1 }
+            knownUnpopulatedPositions = getUnpopulatedPositionsWithSingleCandidate()
         }
     }
 
@@ -92,4 +92,7 @@ class BacktrackingSolver: Solver {
     }
 
     private fun getUnpopulatedPositions() = currentEntries.filterValues { !it.isPopulated() }.keys
+
+    private fun getUnpopulatedPositionsWithSingleCandidate() =
+            currentEntries.filterKeys { currentEntries[it]?.isPopulated() == false && getPossibleValues(it).size == 1 }
 }
