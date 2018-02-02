@@ -1,5 +1,7 @@
 package com.howettl.sudokusolver.solver
 
+import android.os.Handler
+import android.os.Looper
 import com.howettl.sudokusolver.model.Entry
 import com.howettl.sudokusolver.model.Position
 import com.howettl.sudokusolver.model.Puzzle
@@ -19,31 +21,41 @@ class BacktrackingSolver: Solver {
     }
 
     override fun solve(puzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle, Boolean) -> Unit) {
-        if (puzzle.entries == null) {
-            completionListener(puzzle, false)
-            return
-        }
-        originalEntries = puzzle.entries ?: return
-        currentEntries = puzzle.entries?.toMutableMap() ?: return
+        Thread({
+            if (puzzle.entries == null) {
+                notifyCompletionListener(puzzle, false, completionListener)
+                return@Thread
+            }
+            originalEntries = puzzle.entries ?: return@Thread
+            currentEntries = puzzle.entries?.toMutableMap() ?: return@Thread
 
-        if (getUnpopulatedPositions().isEmpty()) {
-            completionListener(puzzle, true)
-            return
-        }
-        doSimpleEntries()
-        val updatedPuzzle = Puzzle()
-        updatedPuzzle.entries = currentEntries
-        updateListener(updatedPuzzle)
-        if (getUnpopulatedPositions().isEmpty()) {
+            if (getUnpopulatedPositions().isEmpty()) {
+                notifyCompletionListener(puzzle, true, completionListener)
+                return@Thread
+            }
+            doSimpleEntries()
+            val updatedPuzzle = Puzzle()
+            updatedPuzzle.entries = currentEntries
+            notifyUpdateListener(updatedPuzzle, updateListener)
+            if (getUnpopulatedPositions().isEmpty()) {
+                val finishedPuzzle = Puzzle()
+                finishedPuzzle.entries = currentEntries
+                notifyCompletionListener(finishedPuzzle, true, completionListener)
+                return@Thread
+            }
+            doSearch(updateListener)
             val finishedPuzzle = Puzzle()
             finishedPuzzle.entries = currentEntries
-            completionListener(finishedPuzzle, true)
-            return
-        }
-        doSearch(updateListener)
-        val finishedPuzzle = Puzzle()
-        finishedPuzzle.entries = currentEntries
-        completionListener(finishedPuzzle, false)
+            notifyCompletionListener(finishedPuzzle, false, completionListener)
+        }).run()
+    }
+
+    private fun notifyUpdateListener(puzzle: Puzzle, updateListener: (Puzzle) -> Unit) {
+        Handler(Looper.getMainLooper()).post { updateListener(puzzle) }
+    }
+
+    private fun notifyCompletionListener(puzzle: Puzzle, solved: Boolean, completionListener: (Puzzle, Boolean) -> Unit) {
+        Handler(Looper.getMainLooper()).post { completionListener(puzzle, solved) }
     }
 
     private fun doSimpleEntries() {
