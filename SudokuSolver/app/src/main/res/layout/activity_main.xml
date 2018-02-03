@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    tools:context="com.howettl.sudokusolver.MainActivity">
+    tools:context="com.howettl.sudokusolver.controller.MainActivity">
 
     <LinearLayout
         android:id="@+id/button_bar"
@@ -29,7 +29,8 @@
 
     </LinearLayout>
 
-    <com.howettl.sudokusolver.PuzzleView
+    <com.howettl.sudokusolver.view.PuzzleView
+        android:id="@+id/puzzleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/button_bar"
