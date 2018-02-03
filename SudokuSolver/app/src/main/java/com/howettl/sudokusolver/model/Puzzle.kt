@@ -8,9 +8,8 @@ import org.json.JSONObject
  * Created by Lee on 2018-01-30.
  * SudokuSolver
  */
-class Puzzle {
-    var entries: Map<Position, Entry>? = null
-
+class Puzzle(var entries: Map<Position, Entry>?) {
+    constructor(): this(null)
     fun setEntries(json: String) {
         try {
             val jsonObject = JSONObject(json)

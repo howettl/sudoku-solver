@@ -38,15 +38,11 @@ class BacktrackingSolver: Solver {
             updatedPuzzle.entries = currentEntries
             notifyUpdateListener(updatedPuzzle, updateListener)
             if (getUnpopulatedPositions().isEmpty()) {
-                val finishedPuzzle = Puzzle()
-                finishedPuzzle.entries = currentEntries
-                notifyCompletionListener(finishedPuzzle, true, completionListener)
+                notifyCompletionListener(Puzzle(currentEntries), true, completionListener)
                 return@Thread
             }
             doSearch(updateListener)
-            val finishedPuzzle = Puzzle()
-            finishedPuzzle.entries = currentEntries
-            notifyCompletionListener(finishedPuzzle, getUnpopulatedPositions().isEmpty(), completionListener)
+            notifyCompletionListener(Puzzle(currentEntries), getUnpopulatedPositions().isEmpty(), completionListener)
         }).run()
     }
 
@@ -64,8 +60,6 @@ class BacktrackingSolver: Solver {
             knownUnpopulatedPositions.keys.forEach { position ->
                 currentEntries[position] = Entry(getPossibleValues(position).first(), false)
             }
-            val updatedPuzzle = Puzzle()
-            updatedPuzzle.entries = currentEntries
             knownUnpopulatedPositions = getUnpopulatedPositionsWithSingleCandidate()
         }
     }
