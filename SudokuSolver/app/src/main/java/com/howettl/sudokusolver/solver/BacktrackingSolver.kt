@@ -12,37 +12,29 @@ import java.util.stream.Collectors.toSet
  * SudokuSolver
  */
 class BacktrackingSolver: Solver {
-    private var originalEntries: Map<Position, Entry>
-    private var currentEntries: MutableMap<Position, Entry>
+    private var puzzle: Puzzle = Puzzle()
 
-    init {
-        originalEntries = mapOf()
-        currentEntries = mutableMapOf()
-    }
-
-    override fun solve(puzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle, Boolean) -> Unit) {
+    override fun solve(newPuzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle, Boolean) -> Unit) {
         Thread({
+            puzzle = newPuzzle
+
             if (puzzle.entries == null) {
                 notifyCompletionListener(puzzle, false, completionListener)
                 return@Thread
             }
-            originalEntries = puzzle.entries ?: return@Thread
-            currentEntries = puzzle.entries?.toMutableMap() ?: return@Thread
 
-            if (getUnpopulatedPositions().isEmpty()) {
+            if (puzzle.getUnpopulatedPositions().isEmpty()) {
                 notifyCompletionListener(puzzle, true, completionListener)
                 return@Thread
             }
-            doSimpleEntries()
-            val updatedPuzzle = Puzzle()
-            updatedPuzzle.entries = currentEntries
-            notifyUpdateListener(updatedPuzzle, updateListener)
-            if (getUnpopulatedPositions().isEmpty()) {
-                notifyCompletionListener(Puzzle(currentEntries), true, completionListener)
+            puzzle = doSimpleEntries(puzzle)
+            notifyUpdateListener(puzzle, updateListener)
+            if (puzzle.getUnpopulatedPositions().isEmpty()) {
+                notifyCompletionListener(puzzle, true, completionListener)
                 return@Thread
             }
-            doSearch(updateListener)
-            notifyCompletionListener(Puzzle(currentEntries), getUnpopulatedPositions().isEmpty(), completionListener)
+            puzzle = doSearch(puzzle, updateListener)
+            notifyCompletionListener(puzzle, puzzle.getUnpopulatedPositions().isEmpty(), completionListener)
         }).run()
     }
 
@@ -54,52 +46,18 @@ class BacktrackingSolver: Solver {
         Handler(Looper.getMainLooper()).post { completionListener(puzzle, solved) }
     }
 
-    private fun doSimpleEntries() {
-        var knownUnpopulatedPositions = getUnpopulatedPositionsWithSingleCandidate()
+    private fun doSimpleEntries(puzzle: Puzzle): Puzzle {
+        var knownUnpopulatedPositions = puzzle.getUnpopulatedPositionsWithSingleCandidate()
         while (knownUnpopulatedPositions.isNotEmpty()) {
             knownUnpopulatedPositions.keys.forEach { position ->
-                currentEntries[position] = Entry(getPossibleValues(position).first(), false)
+                puzzle.entries?.put(position, Entry(puzzle.getPossibleValues(position).first(), false))
             }
-            knownUnpopulatedPositions = getUnpopulatedPositionsWithSingleCandidate()
+            knownUnpopulatedPositions = puzzle.getUnpopulatedPositionsWithSingleCandidate()
         }
+        return puzzle
     }
 
-    private fun doSearch(updateListener: (Puzzle) -> Unit) {
-        // TODO implement
+    private fun doSearch(puzzle: Puzzle, updateListener: (Puzzle) -> Unit): Puzzle {
+        return puzzle
     }
-
-    private fun getUnits(position: Position): Set<Position> {
-        val positions = hashSetOf<Position>()
-        (0 .. 8).forEach { colIndex ->
-            positions.add(Position(position.row, colIndex))
-        }
-        (0 .. 8).forEach { rowIndex ->
-            positions.add(Position(rowIndex, position.col))
-        }
-        val rowRange: IntRange = when (position.row) {
-            in 0..2 -> 0..2
-            in 3..5 -> 3..5
-            in 6..8 -> 6..8
-            else -> return@getUnits hashSetOf()
-        }
-        val colRange: IntRange = when (position.col) {
-            in 0..2 -> 0..2
-            in 3..5 -> 3..5
-            in 6..8 -> 6..8
-            else -> return@getUnits hashSetOf()
-        }
-        for (row: Int in rowRange) { colRange.mapTo(positions) { Position(row, it) } }
-        positions.remove(position)
-        return positions
-    }
-
-    private fun getPossibleValues(position: Position): Set<Int> {
-        val populatedUnits = getUnits(position).filter { currentEntries[it]?.isPopulated() ?: false }
-        return (1..9).filterNot { populatedUnits.map { currentEntries[it]?.number }.contains(it) }.toSet()
-    }
-
-    private fun getUnpopulatedPositions() = currentEntries.filterValues { !it.isPopulated() }.keys
-
-    private fun getUnpopulatedPositionsWithSingleCandidate() =
-            currentEntries.filterKeys { currentEntries[it]?.isPopulated() == false && getPossibleValues(it).size == 1 }
 }
