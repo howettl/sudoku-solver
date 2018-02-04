@@ -7,5 +7,5 @@ import com.howettl.sudokusolver.model.Puzzle
  * SudokuSolver
  */
 interface Solver {
-    fun solve(newPuzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle, Boolean) -> Unit)
+    fun solve(newPuzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle?, Boolean) -> Unit)
 }

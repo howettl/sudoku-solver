@@ -14,7 +14,7 @@ import java.util.stream.Collectors.toSet
 class BacktrackingSolver: Solver {
     private var puzzle: Puzzle = Puzzle()
 
-    override fun solve(newPuzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle, Boolean) -> Unit) {
+    override fun solve(newPuzzle: Puzzle, updateListener: (Puzzle) -> Unit, completionListener: (Puzzle?, Boolean) -> Unit) {
         Thread({
             puzzle = newPuzzle
 
@@ -29,12 +29,12 @@ class BacktrackingSolver: Solver {
             }
             puzzle = doSimpleEntries(puzzle)
             notifyUpdateListener(puzzle, updateListener)
-            if (puzzle.getUnpopulatedPositions().isEmpty()) {
+            if (puzzle.isSolved) {
                 notifyCompletionListener(puzzle, true, completionListener)
                 return@Thread
             }
-            puzzle = doSearch(puzzle, updateListener)
-            notifyCompletionListener(puzzle, puzzle.getUnpopulatedPositions().isEmpty(), completionListener)
+            val completedPuzzle = doSearch(puzzle, updateListener)
+            notifyCompletionListener(completedPuzzle, completedPuzzle?.isSolved ?: false, completionListener)
         }).run()
     }
 
@@ -42,7 +42,7 @@ class BacktrackingSolver: Solver {
         Handler(Looper.getMainLooper()).post { updateListener(puzzle) }
     }
 
-    private fun notifyCompletionListener(puzzle: Puzzle, solved: Boolean, completionListener: (Puzzle, Boolean) -> Unit) {
+    private fun notifyCompletionListener(puzzle: Puzzle?, solved: Boolean, completionListener: (Puzzle?, Boolean) -> Unit) {
         Handler(Looper.getMainLooper()).post { completionListener(puzzle, solved) }
     }
 
@@ -57,7 +57,18 @@ class BacktrackingSolver: Solver {
         return puzzle
     }
 
-    private fun doSearch(puzzle: Puzzle, updateListener: (Puzzle) -> Unit): Puzzle {
-        return puzzle
+    private fun doSearch(searchPuzzle: Puzzle, updateListener: (Puzzle) -> Unit): Puzzle? {
+        if (searchPuzzle.isSolved) return searchPuzzle
+
+        val (position, candidates) = searchPuzzle.getUnpopulatedPosition()
+        if (candidates.isEmpty()) return null
+        candidates.forEach { candidate ->
+            searchPuzzle.entries?.put(position, Entry(candidate, false))
+            notifyUpdateListener(searchPuzzle, updateListener)
+            val updatedPuzzle = doSearch(searchPuzzle, updateListener)
+            if (updatedPuzzle?.isSolved == true) return updatedPuzzle
+        }
+        System.out.println("Position: $position, candidates: $candidates")
+        return null
     }
 }

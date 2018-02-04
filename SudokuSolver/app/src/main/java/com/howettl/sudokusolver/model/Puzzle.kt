@@ -10,6 +10,7 @@ import org.json.JSONObject
  */
 class Puzzle(var entries: MutableMap<Position, Entry>?) {
     constructor(): this(null)
+
     fun setEntries(json: String) {
         try {
             val jsonObject = JSONObject(json)
@@ -29,7 +30,13 @@ class Puzzle(var entries: MutableMap<Position, Entry>?) {
         }
     }
 
-    fun getUnits(position: Position): Set<Position> {
+    val isSolved
+    get() = getUnpopulatedPositions().isEmpty()
+
+    val isUnsolveable
+    get() = getUnpopulatedPositionsWithNoCandidates().isNotEmpty()
+
+    private fun getUnits(position: Position): Set<Position> {
         val positions = hashSetOf<Position>()
         (0 .. 8).forEach { colIndex ->
             positions.add(Position(position.row, colIndex))
@@ -54,13 +61,23 @@ class Puzzle(var entries: MutableMap<Position, Entry>?) {
         return positions
     }
 
+    data class PositionWithCandidates(val position: Position, val candidates: Set<Int>)
+
+    fun getUnpopulatedPosition(): PositionWithCandidates {
+        val position = getUnpopulatedPositions().first()
+        return PositionWithCandidates(position, getPossibleValues(position))
+    }
+
     fun getPossibleValues(position: Position): Set<Int> {
-        val populatedUnits = getUnits(position).filter { entries?.get(it)?.isPopulated() ?: false }
+        val populatedUnits = getUnits(position).filter { entries?.get(it)?.isPopulated ?: false }
         return (1..9).filterNot { populatedUnits.map { entries?.get(it)?.number }.contains(it) }.toSet()
     }
 
-    fun getUnpopulatedPositions() = entries?.filterValues { !it.isPopulated() }?.keys ?: setOf()
+    fun getUnpopulatedPositions() = entries?.filterValues { !it.isPopulated }?.keys ?: setOf()
 
     fun getUnpopulatedPositionsWithSingleCandidate() =
-            entries?.filterKeys { entries?.get(it)?.isPopulated() == false && getPossibleValues(it).size == 1 } ?: mapOf()
+            entries?.filterKeys { entries?.get(it)?.isPopulated == false && getPossibleValues(it).size == 1 } ?: mapOf()
+
+    private fun getUnpopulatedPositionsWithNoCandidates() =
+            entries?.filterKeys { entries?.get(it)?.isPopulated == false && getPossibleValues(it).isEmpty() } ?: mapOf()
 }

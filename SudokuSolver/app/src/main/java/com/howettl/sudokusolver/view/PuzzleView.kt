@@ -23,7 +23,7 @@ class PuzzleView @JvmOverloads constructor(
     var puzzle: Puzzle? = null
     set(value) {
         value?.entries?.forEach { position, entry ->
-            getEntryView(position).setText(if (entry.isPopulated()) entry.number.toString() else "")
+            getEntryView(position).setText(if (entry.isPopulated) entry.number.toString() else "")
         }
         field = value
     }

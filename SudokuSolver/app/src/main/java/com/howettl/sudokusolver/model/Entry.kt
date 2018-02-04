@@ -5,5 +5,5 @@ package com.howettl.sudokusolver.model
  * SudokuSolver
  */
 data class Entry(val number: Int, var isClue: Boolean) {
-    fun isPopulated() = number in 1..9
+    val isPopulated = number in 1..9
 }
