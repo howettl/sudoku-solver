@@ -3,9 +3,7 @@ package com.howettl.sudokusolver.solver
 import android.os.Handler
 import android.os.Looper
 import com.howettl.sudokusolver.model.Entry
-import com.howettl.sudokusolver.model.Position
 import com.howettl.sudokusolver.model.Puzzle
-import java.util.stream.Collectors.toSet
 
 /**
  * Created by Lee on 2018-01-31.
@@ -59,6 +57,7 @@ class BacktrackingSolver: Solver {
 
     private fun doSearch(searchPuzzle: Puzzle, updateListener: (Puzzle) -> Unit): Puzzle? {
         if (searchPuzzle.isSolved) return searchPuzzle
+        if (searchPuzzle.isUnsolvable) return null
 
         val (position, candidates) = searchPuzzle.getUnpopulatedPosition()
         if (candidates.isEmpty()) return null
@@ -68,7 +67,6 @@ class BacktrackingSolver: Solver {
             val updatedPuzzle = doSearch(searchPuzzle, updateListener)
             if (updatedPuzzle?.isSolved == true) return updatedPuzzle
         }
-        System.out.println("Position: $position, candidates: $candidates")
         return null
     }
 }

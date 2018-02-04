@@ -33,10 +33,10 @@ class Puzzle(var entries: MutableMap<Position, Entry>?) {
     val isSolved
     get() = getUnpopulatedPositions().isEmpty()
 
-    val isUnsolveable
+    val isUnsolvable
     get() = getUnpopulatedPositionsWithNoCandidates().isNotEmpty()
 
-    private fun getUnits(position: Position): Set<Position> {
+    internal fun getUnits(position: Position): Set<Position> {
         val positions = hashSetOf<Position>()
         (0 .. 8).forEach { colIndex ->
             positions.add(Position(position.row, colIndex))
