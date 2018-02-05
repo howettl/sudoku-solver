@@ -78,6 +78,6 @@ class Puzzle(var entries: MutableMap<Position, Entry>?) {
     fun getUnpopulatedPositionsWithSingleCandidate() =
             entries?.filterKeys { entries?.get(it)?.isPopulated == false && getPossibleValues(it).size == 1 } ?: mapOf()
 
-    private fun getUnpopulatedPositionsWithNoCandidates() =
+    internal fun getUnpopulatedPositionsWithNoCandidates() =
             entries?.filterKeys { entries?.get(it)?.isPopulated == false && getPossibleValues(it).isEmpty() } ?: mapOf()
 }
